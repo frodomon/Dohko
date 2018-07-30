@@ -30,6 +30,14 @@
       ?>
     </div>
   <?php }
+  function dohko_2nd_img(){
+    global $post;
+    $img_id = get_post_meta( $post->ID, '2nd_img', true );
+    $your_img_src = wp_get_attachment_url( $img_id );
+  ?>
+    <img src="<?php echo $your_img_src; ?>" /> 
+  <?php
+  }
   function dohko_social_share() { 
 		global $post;
   ?>

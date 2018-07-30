@@ -43,7 +43,7 @@
     register_setting( 'dohko-settings-about-us', 'dohko_about_p4' );
     register_setting( 'dohko-settings-about-us', 'dohko_mission' );
     register_setting( 'dohko-settings-about-us', 'dohko_vision' );
-    
+    register_setting( 'dohko-settings-about-us', 'dohko_img_about' );
     
   }
 
@@ -174,6 +174,14 @@
             <th scope="row">Vision:</th>
             <td>
               <textarea name="dohko_vision" style="width:100%; height:100px;"><?php print get_option('dohko_vision'); ?></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Imagen:</th>
+            <td>
+              <div class="wrap">
+                  <?php echo dohko_image_uploader_field( 'dohko_img_about', get_option( 'dohko_img_about' ) ); ?>
+              </div>
             </td>
           </tr>
         </table>

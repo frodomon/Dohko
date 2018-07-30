@@ -8,6 +8,7 @@
   include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
   
   require_once(INCLUDES.'/scripts.php');
+  require_once(INCLUDES.'/upload_images/upload_images.php');
 
   require_once(INCLUDES.'/settings/attachments.php');
   require_once(INCLUDES.'/settings/excerpt.php');

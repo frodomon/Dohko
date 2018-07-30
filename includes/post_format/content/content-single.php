@@ -6,9 +6,13 @@
 		dohko_post_title();
 		dohko_meta_top();
 		dohko_post_content();
+		dohko_2nd_img();
 		dohko_meta_single();
 		if(is_singular()) { 
 			dohko_social_share();
 		}
   ?>
+  
+
+
 </div>
