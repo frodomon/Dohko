@@ -1,4 +1,3 @@
-<hr class="section-separator">
 <section id="clients" class="group">
   <h2 class="section-title">CLIENTS</h2>
   <div class="clients group">

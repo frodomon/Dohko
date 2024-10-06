@@ -31,32 +31,20 @@
 						)
 					)
 			);
-			$recentposts = new WP_Query($args);
+			$posts = new WP_Query($args); ?>
 
-			if ($recentposts->have_posts()){
-				while ( $recentposts->have_posts() ) {
-					$recentposts->the_post(); ?>
-		        <div class='recent_post'>
-		        	<?php
-		        		if ( get_post_format() ) {
-		        			get_template_part( 'includes/recent_posts_widget/layout', get_post_format() );
-								}
-								else { ?>
-									<div class="thumb">
-				        		<?php if ( has_post_thumbnail()) { ?>
-				  						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					        			<?php $post_thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?> 
-			        					<img src="<?php echo $post_thumbnail_url; ?>" /> 
-				  						</a>
-				  					<?php } ?>
-				        	</div>
-								<?php } ?>
-				        <h4 class='rp_title'><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				    </div>
+			<div class='recent_post'>
+			<?php
+			if ($posts->have_posts()){
+				while ( $posts->have_posts() ) {
+					$post = $posts->the_post(); ?>
+	        	<h5 class="pad-bot-2x"><a class='rp_list' href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><i class="fa fa-edit rp_icon" aria-hidden="true"></i><?php the_title(); ?></a></h5>
 		    <?php }
-		  } 	
-			wp_reset_postdata();
-			echo $after_widget; 
+		  } ?>
+		  </div>
+			<?php 
+				wp_reset_postdata();
+				echo $after_widget; 
 		}
 
 		public function update( $new_instance, $old_instance ) {

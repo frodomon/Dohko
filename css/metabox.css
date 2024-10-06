@@ -6,37 +6,26 @@
   clear: both; 
   visibility: hidden;
 }
-
 .metabox{
 	width:100%;
 	box-sizing: border-box;
+	min-height: 200px;
 }
 .field{
 	width:100%;
 	padding: 10px 0;
 	box-sizing: border-box;
+	min-height: 80px;
 }
 .fieldname{
-	width: 20%;
-	float:left;
-	display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-	box-sizing: border-box;
 }
 .fieldname label{
 	font-weight: bold;
 }
 .fieldvalue{
-	width:80%;
-	float:left;
-	display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-	box-sizing: border-box;
 }
 .fieldvalue input{
-	width:50%;
+	width:100%;
 }
 .fieldvalue .custom-img-container{
 	width: 20%;

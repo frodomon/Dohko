@@ -1,4 +1,3 @@
-<hr class="section-separator">
 <section id="suppliers" class="group">
   <h2 class="section-title">SUPPLIERS</h2>
   <div class="suppliers group">

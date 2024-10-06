@@ -1,6 +1,17 @@
 <section id="services">
   <h2 class="section-title">SERVICIOS</h2>
   <p class="section-description">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+  <div class='fullwidth group'>
+    <div class='col-4 left'>
+      <div class='prueba'></div>
+    </div>
+    <div class='col-4 left'>
+      <div class='prueba'></div>
+    </div>
+    <div class='col-4 left'>
+      <div class='prueba'></div>
+    </div>
+  </div>
 	<div class="services group">
 		<?php 
       $posts= query_posts(array(

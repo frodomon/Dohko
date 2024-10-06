@@ -1,17 +1,6 @@
-<div class="entry-video"> 
-	<?php 
-		$video_url = get_field('video_url');
-		$video_embed = get_field('video_embed');
-		$video_file = get_field('video_file');
-		
-		if($video_url !== ''){ 
-			echo wp_oembed_get($video_url);
-		} 	
-		elseif($video_embed !== '') { 
-		  echo $video_embed;
-		}
-		elseif($video_file !== '') {
-			echo do_shortcode( '[video src="'.$video_file.'"]' );
-		} 
-	?>
+<div class="thumbnail">
+	<?php get_template_part( 'includes/post_format/layout/layout', 'video' ); ?>
+</div>
+<div class="index-post-content">
+  <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 </div>

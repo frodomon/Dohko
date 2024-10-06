@@ -1,15 +1,6 @@
-<div class="entry-audio">
-	<?php 
-		$audio_url = get_field('audio_url');
-		$audio_embed = get_field('audio_embed');
-		$audio_file = get_field('audio_file');
-
-		if($audio_url !== ''){ echo wp_oembed_get($audio_url); } 
-		elseif($audio_embed !== '') { echo $audio_embed; }
-		elseif($audio_file !== '') {  
-	?>
-	  <audio controls="controls">  
-		  <source src="<?php echo $audio_file; ?>" />  
-		</audio>
-	<?php } ?>
+<div class="thumbnail">
+	<?php get_template_part( 'includes/post_format/layout/layout', 'audio' ); ?>
+</div>
+<div class="index-post-content">
+  <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 </div>

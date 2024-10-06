@@ -58,7 +58,6 @@ audio:not([controls]) {
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
 html {
-    font-size: 100%; /* 1 */
     overflow-y: scroll; /* 2 */
     -webkit-text-size-adjust: 100%; /* 3 */
     -ms-text-size-adjust: 100%; /* 3 */
@@ -92,9 +91,11 @@ textarea {
 
 a {
     color: #00e;
+    text-decoration: none !important;
 }
 a:visited {
     color: #551a8b;
+    text-decoration: none !important;
 }
 /*
  * Addresses outline displayed oddly in Chrome

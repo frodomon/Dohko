@@ -8,18 +8,28 @@
       $pages = $wp_query->max_num_pages;
       if(!$pages){ $pages = 1;}
     }   
-    if(1 != $pages){
-      echo "<div class='pagination aligncenter'>";
-      if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>First</a>";
-      if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a>";
+    if(1 != $pages){ ?>
+      <div class='pagination flex-center-row'>
+      <?php if($paged > 2 && $paged > $range+1 && $showitems < $pages){ ?> <a href='<?php echo get_pagenum_link(1); ?>'> <?php _e('Primero'); ?></a><?php } ?>
+      <?php if($paged > 1 && $showitems < $pages) { ?> <a href='<?php echo get_pagenum_link( $paged - 1); ?>'><</a><?php }
+      //para cada pagina
       for ($i=1; $i <= $pages; $i++){
         if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )){
-          echo ($paged == $i)? "<span class='current'>".$i."</span>":"<a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a>";
+          if ($paged == $i){ ?>
+            <p class='current'><?php echo $i; ?></p>
+          <?php }
+          else{ ?>
+            <p class='inactive'><a href='<?php echo get_pagenum_link($i); ?>'><?php echo $i ?></a></p>
+          <?php }
         }
       }
-      if ($paged < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";  
-      if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last</a>";
-        echo "</div>\n";
-    }
+      if ($paged < $pages && $showitems < $pages){ ?>
+        <p><a href='<?php echo get_pagenum_link($paged + 1); ?>'>></a></p>
+      <?php } 
+      if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages){ ?>
+        <p><a href='<?php echo get_pagenum_link($pages); ?>'><?php echo _e('Último'); ?></a></p>
+      <?php } ?> 
+      </div>
+    <?php }
   }
 ?>

@@ -1,16 +1,20 @@
 <?php /* Template Name: Archives */ ?>
 <?php get_header(); ?>
-<div id="main" class="group">
-	<div id="blog" class="left-col archives">
-		<h2>Archives by Month:</h2>
+<section id="page" class="group">
+	<div class="col-9 col-tab-6 col-mob-4 left">
+		<div class="w90">
+			<h2><?php _e('Historial por mes:','dohko') ?></h2>
 			<ul>
-				<?php wp_get_archives('type=monthly'); ?>
+				<?php wp_get_archives(array(
+					'type'		=>	'monthly',
+				)); ?>
 			</ul>
-		<h2>Archives by Subject:</h2>
+			<h2><?php _e('Historial por categoria:','dohko'); ?></h2>
 			<ul>
 				 <?php wp_list_categories('hierarchical=0&title_li='); ?>
-			</ul>		
+			</ul>	
+		</div>
 	</div>
 	<?php get_sidebar(); ?>
-</div>
+</section>
 <?php get_footer(); ?>

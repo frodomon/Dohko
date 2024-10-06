@@ -1,8 +1,9 @@
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 right-col group">
-	<aside>
-		<div class='sidebar'>
-			<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Primary Sidebar') ) : ?>
-			<?php endif; ?>
-		</div>
-	</aside>
-</div>
+<aside class="col-3 col-tab-2 col-mob-4 pad-bot-2x left">
+	<?php
+		if (is_active_sidebar('main-sidebar')){
+			dynamic_sidebar('main-sidebar');
+		} else{
+			get_search_form();
+		}   
+	?>
+</aside>

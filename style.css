@@ -1,15 +1,19 @@
 /*
 Theme Name: Dohko
+Theme URI:  www.ola.com;
 Author: Alfredo Vásquez
 Author URI: http://www.alfredovasquezalcala.com
 Description: A general purpose theme.
 Version: 1.0
-Tags: masonry
+License: GMU General Public License v2 or later;
+License URI:  ;
+Tags: masonry;
+Text Domain: dohko;
 */
+
 @import url("css/reset.css");
-@import url("css/bootstrap.min.css");
 @import url("css/fonts.css");
 @import url("css/flexslider.css");
 @import url("css/master.css");
+@import url("css/responsive.css");
 @import url("css/ie.css");
-@import url("css/superfish.css");

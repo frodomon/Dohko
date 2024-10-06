@@ -1,0 +1,250 @@
+/*--------------------MEDIA QUERY-----------------------*/
+@media only screen and (min-width: 7680px){
+	#grid[data-columns]::before{
+		content: '3 .column.size-1of3';
+	}
+	html{
+		font-size: 160px;
+	}
+	.product-description{
+		min-height: 140px;
+	}
+}
+@media only screen and (min-width: 3840px) and (max-width: 7679px){
+	#grid[data-columns]::before{
+		content: '3 .column.size-1of3';
+	}
+	html{
+		font-size: 80px;
+	}
+	.product-description{
+		min-height: 140px;
+	}
+}
+@media only screen and (min-width: 2560px) and (max-width: 3839px){
+	#grid[data-columns]::before{
+		content: '3 .column.size-1of3';
+	}
+	html{
+		font-size: 40px;
+	}
+	.product-description{
+		min-height: 140px;
+	}
+}
+@media only screen and (min-width: 1920px)and (max-width: 2559px){
+	#grid[data-columns]::before{
+		content: '3 .column.size-1of3';
+	}
+	.product-description{
+		min-height: 140px;
+	}
+	html{
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 1440px) and (max-width: 1919px){
+	#grid[data-columns]::before{
+		content: '2 .column.size-1of2';
+	}
+	html{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+	#grid[data-columns]::before{
+		content: '2 .column.size-1of2';
+	}
+	html{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1023px){
+	#grid[data-columns]::before{
+		content: '2 .column.size-1of2';
+	}
+	html{
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 991px){
+	html{
+		font-size: 15px;
+	}
+	#grid[data-columns]::before{
+		content: '1 .column.size-1of1';
+	}
+	.col-tab-1{
+		width: 12.5%;
+		padding-left: calc(5%/8);
+		padding-right: calc(5%/8);
+	}
+	.col-tab-2{
+		width: 25%;
+		padding-left: calc(2.5%/4);
+		padding-right: calc(2.5%/4);
+	}
+	.col-tab-3{
+		width: 37.5%;
+		padding-left: calc(1.67%*3/8);
+		padding-right: calc(1.67%*3/8);
+	}
+	.col-tab-4{
+		width: 50%;
+		padding-left: calc(1.25%/2);
+		padding-right: calc(1.25%/2);
+	}
+	.col-tab-5{
+		width: 62.5%;
+		padding-left: calc(1%*5/8);
+		padding-right: calc(1%*5/8);
+	}
+	.col-tab-6{
+		width: 75%;
+		padding-left: calc(0.83%*6/8);
+		padding-right: calc(0.83%*6/8);
+	}
+	.col-tab-7{
+		width: 87.5%;
+		padding-left: calc(0.71%*7/8);
+		padding-right: calc(0.71%*7/8);
+	}
+	.col-tab-8{
+		width: 100%;
+		padding-left: calc(0.63%);
+		padding-right: calc(0.63%);
+	}
+	section{
+		padding: 2.5rem 5%;
+	}
+	.searchbar{
+		width: 90%;
+	}
+	.footer-top{
+		height: auto;
+	}
+	.footer-top .col-mob-4{
+		padding-bottom: 2rem;
+	}
+	.float-footer-l{
+		float: right;
+	}
+	.float-footer-r{
+		float: left;
+	}
+	.mailchimp{
+		width: 90%;
+	}
+	.rp_list{
+		height: auto;
+	}
+	.footer-menu{
+		justify-content: flex-start;
+	}
+}
+@media only screen and (max-width: 599px){
+	html{
+		font-size: 14px;
+	}
+	#grid[data-columns]::before{
+		content: '1 .column.size-1of1';
+	}
+	.col-mob-1{
+		width: 25%;
+		padding-left: calc(5%/4);
+		padding-right: calc(5%/4);
+	}
+	.col-mob-2{
+		width: 50%;
+		padding-left: calc(2.5%/2);
+		padding-right: calc(2.55%/2);
+	}
+	.col-mob-3{
+		width: 75%;
+		padding-left: calc(1.67%*3/4);
+		padding-right: calc(1.67%*3/4);
+	}
+	.col-mob-4{
+		width: 100%;
+		padding-left: 1.25%;
+		padding-right: 1.25%;
+	}
+	section{
+		padding: 2.5rem 5%;
+	}
+	.w90{
+		width: 100%;
+		margin: 0;
+	}
+	.hide-responsive{
+		display: none;
+	}
+	.show-responsive{
+		display:block;
+	}
+	.mobile{
+		display: block;
+	}
+	footer{
+		padding-top: 2rem;
+	}
+	.footer-top{
+		height: auto;
+	}
+	.footer-top .col-mob-4{
+		padding-bottom: 2rem;
+	}
+	.float-footer-l{
+		float: right;
+	}
+	.float-footer-r{
+		float: left;
+	}
+	.mailchimp{
+		width: 90%;
+	}
+	.footer-menu{
+		justify-content: flex-start;
+	}
+	.copyright{
+		text-align: center;
+		padding: 0.25rem 0;
+	}
+	.pagination{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	header{
+		height: 56px;
+	}
+	#header-menu{
+		height: 0;
+	}
+	#wp-megamenu-main-menu{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 56px !important;
+		width: 100%;
+	}
+	.wp-megamenu-sub-menu{
+		background-color: #ffffff;
+	}
+	.rp_list{
+		height: auto;
+	}
+	.slide-wrap{
+		width: 100%;
+	}
+	.slide-text{
+		font-size: 0.6rem;
+	}
+	.slide-btn{
+		margin-top: 0.5rem;
+		padding: 0.5rem 0.5rem;
+	}
+	.slide-btn-text{
+		font-size: 0.6rem;
+	}
+
+}

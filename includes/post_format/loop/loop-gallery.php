@@ -1,17 +1,13 @@
-<div class="index-post group">
+<article class="index-post">
 	<div class="thumbnail">
-		<?php
-			dohko_post_format();
-			get_template_part( 'includes/post_format/layout/layout', 'gallery' );
-		?>
+		<?php get_template_part( 'includes/post_format/layout/layout', 'gallery' ); ?>
 	</div>
 	<div class="index-post-content group">
 		<?php 
+			dohko_post_attributes();
 			index_post_title();
 			dohko_post_content();
+			dohko_meta_index();
 		?>
 	</div>
-	<div class="index-post-meta group">
-		<?php dohko_meta_index(); ?>
-	</div>
-</div>
+</article>

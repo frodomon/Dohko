@@ -1,5 +1,4 @@
-<div class="flex-wrapper">
-  <div id="slider" class="flexslider">
+<div class="gallery-post">
     <ul class="slides">
       <?php 
         if ( get_post_gallery() ) :
@@ -7,13 +6,12 @@
           /* Loop through all the image and output them one by one */
           foreach( $gallery['src'] as $src ) : ?>
             <li>
-              <img src="<?php echo $src; ?>" />
+              <img class='slide' src="<?php echo $src; ?>" />
             </li>
       <?php 
           endforeach; 
         endif;
       ?>
     </ul>
-  </div>
 </div>
 

@@ -8,4 +8,19 @@
 	  return '...';
 	}
 	add_filter('excerpt_more', 'new_excerpt_more');
+
+	//Funcion para limitar y filtrar el excerpt
+	function dohko_custom_excerpt( $limit ){
+		$extract = explode(' ', get_the_excerpt(), $limit);
+		if (count($extract) >= $limit ){
+			array_pop($extract);
+			$extract = implode(' ', $extract) . '...';
+		}
+		else{
+			$extract = implode(' ', $extract) ;
+		}
+		$extract = preg_replace('`\[[^\]]*\]`', '', $extract);
+		return $extract;
+	}
+
 ?>

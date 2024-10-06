@@ -1,10 +1,9 @@
-<hr class="section-separator">
 <section id="news" class="group">
-  <h2 class="section-title">BLOG</h2>
-  <div id="news-posts" class="group">
+  <h2 class="pad-bot aligncenter">BLOG</h2>
+  <div id="news-posts" class="fullwidth flex-top-row group">
     <?php 
       $posts= query_posts(array(
-        'posts_per_page' => '3',
+        'posts_per_page' => '4',
         'post_type' => 'post',
         'post_status' => 'publish',
         'tax_query' => 
@@ -19,16 +18,20 @@
       ));
       foreach ($posts as $post) :  setup_postdata($post); 
     ?>      
-      <div class="news-post group">
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <?php $post_thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?> 
-          <div class="news-thumbnail" style="background:url(<?php echo $post_thumbnail_url; ?>) no-repeat center center; background-size:cover">
+      <div class="col-3 col-mob-4 col-tab-4 left">
+        <article class="index-post">
+          <div class="thumbnail">
+            <?php index_post_thumbnail();?>
           </div>
-        </a>
-        <div class='news-post-content group'>
-          <h3 class="news-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-          <p class="news-post-excerpt"><?php print get_the_excerpt($post); ?></p>
-        </div>
+          <div class="index-post-content">
+            <?php
+              dohko_post_attributes();
+              index_post_title();
+              dohko_post_content();
+              dohko_meta_index()
+            ?>
+          </div>
+        </article>
       </div>
     <?php endforeach;
     wp_reset_postdata(); ?>
