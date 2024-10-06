@@ -32,7 +32,7 @@
 		<p>Síguenos en Instagram  <a  href="<?php print $instagram; ?>" target="_blank">@eltablerodeotto</a></p>
 </div>
 <div>
-	<?php echo do_shortcode('[instagram-feed]'); ?>
+	<?php echo do_shortcode('[instagram-feed feed=1]'); ?>
 </div>
 <footer>
 	<div class="footer-top group">
@@ -52,7 +52,7 @@
 				<?php if(isset($discord)): ?><a class='social' href="<?php echo esc_url($discord); ?>" target="_blank"><i class="fab fa-discord footer_icon" aria-hidden="true"></i></a><?php endif; ?>
 				<?php if(isset($twitch)): ?><a class='social' href="<?php echo  esc_url($twitch); ?>" target="_blank"><i class="fa fa-twitch footer_icon" aria-hidden="true"></i></a><?php endif; ?>
 			</div>
-			<?php if($address_line_1): ?> 
+			<?php if(isset($address_line_1)): ?> 
 			<div class='fullwidth flex-center-row pad-bot'>
 				<table>
 				  <tr>

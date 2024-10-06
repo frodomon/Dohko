@@ -10,6 +10,7 @@ html{
 body {
   width: 100%;
   background-color: #FFFFFF;
+  overflow: auto hidden;
 }
 h1, h1 a{
 	font-family: 'Poppins',sans-serif;
@@ -183,7 +184,7 @@ em{
 	float: left;
 }
 .col-12{
-	width: 100%%;
+	width: 100%;
 	padding: 0 0.4167%;
 	float: left;
 }
